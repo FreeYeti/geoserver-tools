@@ -1,0 +1,17 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: demo-nginx-test
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 30
+  template:
+    spec:
+      imagePullSecrets:
+        - name: westdc-cr
+      restartPolicy: Never
+      containers:
+        - name: demo-nginx-test
+          image: cr.westdc.cn/styler/styler:__COMMIT_TAG__
+          imagePullPolicy: Always
+          command: ["nginx", "-t"]
