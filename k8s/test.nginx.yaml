@@ -7,8 +7,6 @@ spec:
   activeDeadlineSeconds: 30
   template:
     spec:
-      imagePullSecrets:
-        - name: westdc-cr
       restartPolicy: Never
       containers:
         - name: demo-nginx-test
