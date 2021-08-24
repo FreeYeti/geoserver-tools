@@ -12,6 +12,6 @@ spec:
       restartPolicy: Never
       containers:
         - name: demo-nginx-test
-          image: cr.westdc.cn/styler/styler:__COMMIT_TAG__
+          image: freeyeti/geoserver-tools:__IMAGE_TAG__
           imagePullPolicy: Always
           command: ["nginx", "-t"]

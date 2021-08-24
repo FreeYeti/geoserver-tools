@@ -6,7 +6,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    index: ["./src/portal/index.js"],
+    index: ["./src/index.js"],
   },
   output: {
     path: path.resolve(path.dirname(__dirname), "assets"),
@@ -17,7 +17,7 @@ module.exports = {
   resolve: {
     alias: {
       "@utils": path.resolve(__dirname, "../src/utils"),
-      "@portal": path.resolve(__dirname, "../src/portal"),
+      "@portal": path.resolve(__dirname, "../src"),
     },
   },
   optimization: {
@@ -32,6 +32,12 @@ module.exports = {
           chunks: "all",
           reuseExistingChunk: true,
         },//react
+        codemirror: {
+          test: /[\\/]node_modules[\\/](codemirror)[\\/]/,
+          name: "codemirror",
+          chunks: "all",
+          reuseExistingChunk: true,
+        },//react
       },//cacheGroups
     },//splitChunks
   },//optimization
@@ -41,6 +47,7 @@ module.exports = {
         test: /\.jsx?$/,
         use: [{ loader: "babel-loader" }],
         exclude: /node_modules|zip/,
+        include: path.join(path.dirname(__dirname), "src"),
       }, //JSX and JS -> babel-loader
 
       {
@@ -101,14 +108,14 @@ module.exports = {
     }),
     new HtmlWebpackPlugin({
       filename: "index.html",
-      template: "./src/portal/index.html",
+      template: "./src/index.html",
       chunks: ["index"],
       hash: true,
     }), // HTML plugin - portal
     new webpack.DefinePlugin({
       NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       PATH_PREFIX: JSON.stringify(process.env.PATH_PREFIX),
-      GEOSERVER: JSON.stringify("https://geo.westdc.cn/geoserver"),
+      GEOSERVER: JSON.stringify(process.env.GEOSERVER),
     }), // Define plugin
     new MiniCssExtractPlugin({
       chunkFilename: "[name].[hash].bundle.css",

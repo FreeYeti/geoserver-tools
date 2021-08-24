@@ -8,4 +8,4 @@ services:
       args:
         - path_prefix=
         - geoserver=
-    image: freeyeti/geoserver-tools:__COMMIT_TAG__
+    image: freeyeti/geoserver-tools:__IMAGE_TAG__

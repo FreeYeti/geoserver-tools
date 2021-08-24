@@ -36,6 +36,7 @@ module.exports = {
         test: /\.jsx?$/,
         use: [{ loader: "babel-loader" }],
         exclude: /node_modules|zip/,
+        include: path.join(path.dirname(__dirname), "src"),
       }, //JSX and JS -> babel-loader
 
       {
