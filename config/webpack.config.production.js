@@ -27,7 +27,7 @@ module.exports = {
       name: "vendor",
       cacheGroups: {
         react: {
-          test: /[\\/]node_modules[\\/](react|react-dom|redux|react-redux|reduxjs)[\\/]/,
+          test: /[\\/]node_modules[\\/](react|react-dom|react-router-dom|react-router|redux|react-redux|@reduxjs|redux-thunk)[\\/]/,
           name: "react",
           chunks: "all",
           reuseExistingChunk: true,
@@ -37,7 +37,7 @@ module.exports = {
           name: "codemirror",
           chunks: "all",
           reuseExistingChunk: true,
-        },//react
+        },//codemirror
       },//cacheGroups
     },//splitChunks
   },//optimization
