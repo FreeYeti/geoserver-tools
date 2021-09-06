@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import SendIcon from "@material-ui/icons/Send";
-import Snackbar from "@material-ui/core/Snackbar";
-import MuiAlert from "@material-ui/core/Alert";
-import { LoadingButton } from "@material-ui/lab";
+import SendIcon from "@mui/icons-material/Send";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+import { LoadingButton } from "@mui/lab";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;

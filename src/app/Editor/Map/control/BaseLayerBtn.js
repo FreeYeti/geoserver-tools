@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
-import IconButton from "@material-ui/core/IconButton";
-import PublicIcon from "@material-ui/icons/Public";
+import IconButton from "@mui/material/IconButton";
+import PublicIcon from "@mui/icons-material/Public";
 
 import OSM from "ol/source/OSM";
 import TileLayer from "ol/layer/Tile";

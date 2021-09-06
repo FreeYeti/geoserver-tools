@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 
-import IconButton from "@material-ui/core/IconButton";
-import ZoomOutIcon from "@material-ui/icons/ZoomOut";
-import ZoomInIcon from "@material-ui/icons/ZoomIn";
+import IconButton from "@mui/material/IconButton";
+import ZoomOutIcon from "@mui/icons-material/ZoomOut";
+import ZoomInIcon from "@mui/icons-material/ZoomIn";
 
 import { easeOut } from "ol/easing";
 import { getMap } from "../mapInstance";

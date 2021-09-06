@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import ListItem from "@material-ui/core/ListItem";
-import ListItemButton from "@material-ui/core/ListItemButton";
-import ListItemText from "@material-ui/core/ListItemText";
-import Checkbox from "@material-ui/core/Checkbox";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
+import Checkbox from "@mui/material/Checkbox";
 
 // import { getLayersOfWorkspace } from "../ajax";
 // import { saveLayers } from "@portal/store/reducers/geoserver";

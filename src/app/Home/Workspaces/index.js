@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import List from "@material-ui/core/List";
+import List from "@mui/material/List";
 import Item from "./item";
 
 import { getWorkspaces } from "@portal/utils/ajax";

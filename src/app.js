@@ -14,8 +14,8 @@ import Login from "./app/Login";
 import { getAuth } from "@portal/utils/storage";
 import { login, logout } from "@portal/store/reducers/login";
 
-import CircularProgress from "@material-ui/core/CircularProgress";
-import Box from "@material-ui/core/Box";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 
 const createApp = (Component, props) => {
   return (

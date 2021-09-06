@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import ListItem from "@material-ui/core/ListItem";
-import ListItemButton from "@material-ui/core/ListItemButton";
-import ListItemIcon from "@material-ui/core/ListItemIcon";
-import ListItemText from "@material-ui/core/ListItemText";
-import StarIcon from "@material-ui/icons/Star";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import StarIcon from "@mui/icons-material/Star";
+import CircularProgress from "@mui/material/CircularProgress";
 
 import { getLayersOfWorkspace } from "@portal/utils/ajax";
 import { saveLayers } from "@portal/store/reducers/geoserver";

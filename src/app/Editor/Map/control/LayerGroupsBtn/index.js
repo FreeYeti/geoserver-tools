@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import IconButton from "@material-ui/core/IconButton";
-import Tooltip from "@material-ui/core/Tooltip";
-import LayersIcon from "@material-ui/icons/Layers";
-import { Drawer } from "@material-ui/core";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import LayersIcon from "@mui/icons-material/Layers";
+import { Drawer } from "@mui/material";
 
 import List from "./list";
 

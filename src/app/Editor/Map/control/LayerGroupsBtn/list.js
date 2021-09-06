@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import Box from "@material-ui/core/Box";
-import List from "@material-ui/core/List";
-import CircularProgress from "@material-ui/core/CircularProgress";
+import Box from "@mui/material/Box";
+import List from "@mui/material/List";
+import CircularProgress from "@mui/material/CircularProgress";
 
 import { getLayersOfWorkspace } from "@portal/utils/ajax";
 
